@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <joint name="laser_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="laser_frame"/>
+        <origin xyz="0.06 0.0 0.05" rpy="0 0 0"/>
+
+
+    </joint>
+
+    <link name="laser_frame">
+        <visual>
+            <origin xyz="0.0 0.0 -0.025" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="package://beagle_description/meshes/nano_lidar.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 -0.025" rpy="0 0 ${pi/2}"/>
+            <geometry>
+                <mesh filename="package://beagle_description/meshes/nano_lidar.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+        <!-- update inertial -->
+        <xacro:inertial_cylinder mass="0.1" length="0.032" radius="0.0125">
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- using gazebo -->
+    
+
+</robot>
