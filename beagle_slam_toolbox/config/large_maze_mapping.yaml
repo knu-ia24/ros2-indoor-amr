@@ -19,7 +19,7 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose    /home/jang/robot_ws/src/Beagle/beagle_slam_toolbox/map/mini_maze_serial
-    map_file_name: /home/jang/robot_ws/src/Beagle/beagle_slam_toolbox/map/large_maze/large_maze_serial
+    map_file_name: /home/jang/robot_ws/src/ros2-indoor-amr/beagle_slam_toolbox/map/large_maze/large_maze_serial
     # map_start_pose: [0.0, 0.0, 0.0]
     map_start_at_dock: true
 
